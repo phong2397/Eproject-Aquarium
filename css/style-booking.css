@@ -1,0 +1,240 @@
+.panel-body {
+    left: 0;
+    top: 10px;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    z-index: -999999;
+    position: fixed;
+}
+
+#content {
+    border-top: 1px solid red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.3;
+    width: 70%;
+}
+
+#panel {
+    position: relative;
+    margin-top: 70px;
+    height: 250px;
+    padding-left: 20px;
+    background: url("../img/event/events.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+p {
+    text-align: justify;
+    padding: 5px 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#content .row {
+    text-align: left;
+    padding: 10px;
+}
+
+#outline1 {
+    border: 3px solid aquamarine;
+    outline-color: lightgreen;
+    outline-style: solid;
+    outline-width: 5px;
+}
+
+table {
+    border: 1px solid gray;
+    width: 100%;
+    margin: 20px 0px;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid gray;
+    height: 35px;
+    padding: 5px;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+#colleft {
+    padding-top: 45px;
+}
+
+#paneltext {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+    font-size: 4em;
+    text-shadow: 2px 2px 2px yellowgreen;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+#rowEvent1 {
+    border-bottom: 1px solid grey;
+    padding: 20px 50px;
+}
+
+#rowEvent {
+    position: relative;
+    padding: 20px 50px;
+    border-bottom: 1px solid grey;
+}
+
+#imageEvent {
+    text-align: right;
+    padding: 20px;
+}
+@media screen and (max-width:1024px){
+    .panel-body{display: none;}
+}
+@media screen and (max-width:1024px){
+    #paneltext{font-size: 35px}
+}
+@media screen and (max-width:1024px){
+    #panel{height: 100px;margin-top: 70px}
+}
+@media screen and (max-width:1024px){
+    .modal-body{width: 100%}
+}
+.modal-header {
+    background-image: url("../img/booking/modal_content2.jpg");
+}
+
+.modal-footer {
+    background-image: url("../img/booking/modal_content2.jpg");
+    height: 80px;
+}
+/*column event*/
+
+#colEvent {
+    border: 3px solid rgb(98, 98, 224);
+    position: relative;
+    margin-left: 0px;
+    box-shadow: 2px 2px 2px rgb(21, 43, 21);
+    border-radius: 10px;
+    height: 500px;
+    box-sizing: border-box;
+     overflow: scroll;
+    text-align: center;
+}
+/*column form*/
+
+#colBooking {
+    border: 3px solid rgb(98, 98, 224);
+    position: relative;
+    margin-left: 0px;
+    box-shadow: 2px 2px 2px green;
+    border-radius: 10px;
+    height: 500px;
+    box-sizing: border-box;
+ 
+}
+
+.modal-body {
+    background-color:ghostwhite;
+}
+
+#rowmain {
+    border-radius: 1px;
+}
+/*keep main form follow menu bar*/
+
+#mymodal {
+    position: relative;
+    margin-top: 125px;
+   
+}
+
+.input-group {
+    margin-bottom: 10px;
+    
+}
+/*check valid of input*/
+
+.input-group>input{
+    background-color: DeepSkyBlue;
+}
+
+input:required {
+    border-color: green;
+}
+/*position submit button on the form*/
+
+#nameSubmit {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+/*total input width*/
+
+#numTotal {
+    width: 80px;
+}
+/*the note will view when user submit successfully*/
+
+#submitinfor2 {
+    position: fixed;
+    left: 400px;
+    bottom: 200px;
+    display: none;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px purple;
+    background-color: aquamarine;
+    width: 800px;
+    height: 500;
+    z-index: 2;
+    padding: 20px 50px 20px 150px;
+}
+/*button 'ok' on the note above */
+
+#btnAlert {
+    position: relative;
+    width: 100px;
+    left: 200px;
+    background-color: blue;
+}
+
+#detailevent {
+    position: absolute;
+    top: 550px;
+    text-align: left;
+    left: 100px;
+   
+}
+#detailevent>p{
+    color: black;
+}
+/* alert when user input*/
+
+#alertinput {
+    position: absolute;
+    z-index: 3;
+}
+/*word "usd" near input total*/
+
+#usd {
+    position: relative;
+    top: 6px;
+    padding: 5px;
+    background-color: rgb(243, 237, 237);
+}
+/* alert when submit error*/
+
+#submiterror {
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    z-index: 5;
+    display: none;
+}

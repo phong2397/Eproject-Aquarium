@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" href="../eproject/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+<!--Js-->
+<script src="../eproject/js/jquery-3.2.1.min.js"></script>
+<script src="../eproject/js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<link rel="stylesheet" href="css/style-booking.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top" style="background-color: rgba(0,0,0,.2);">
+        <div class="container">
+    
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="homepage.html"><i class="fa fa-rebel"></i> <strong>AQUARIUM</strong></a> </div>
+    
+    
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a><i class="fa fa-lg fa-home"></i></a></li>
+                    <li><a href="homepage.html" class="page-scroll">Home</a></li>
+    
+                  
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Animals<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        
+                        <li><a href="fish.html">Fish</a></li>
+                        <li><a href="mammals.html">Mammals</a></li>
+                        <li><a href="cephalopod.html">Cephalopods</a></li>
+                        <li><a href="inverterbrate.html">Invertebrates</a></li>
+                        <li><a href="echinoderms.html">Echinoderms</a></li>
+                        <li><a href="shark.html">Sharks</a></li>
+                        <li><a href="crabsandmollusk.html">Crabs & mollusks</a></li>
+                      </ul>
+                  </li>
+                    <li><a href="event.html" class="page-scroll">Event</a></li>
+                   
+                    <li><a href="contact.html" class="page-scroll">Contact</a></li>
+                    <li><a href="booking.html" class="button" style="border-radius: 5px;padding: 8px;background: red;color: white;;margin-top: 8px">Buy Tickets Now!</a></li>
+                    
+                </ul>
+            </div>
+    
+        </div>
+    </nav>
+
+
+    
+
+
+<!-- Contact Section -->
+<div id="contact-section" class="text-center" style="background-image: url(img/ocean.png)">
+    <div class="container">
+        <div class="pattern_ft1">
+            <div class="container">
+                <div id="content" class="container" ng-app="myApp">
+                    <div id="mymodal" ng-controller="myModal">
+                        <div class="modal-dialog modal-lg">
+                            <!--====================modal content=============================-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" style="color: black;font-weight: bolder;">Booking Event</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="border_body">
+                                        <div class="row" id="rowmain">
+                                            <!--==========================column  detail event=====================-->
+                                            <div class="col-md-6" id="colEvent">
+                                                <h2 style="text-align:center;">Details Event</h2>
+                                                <hr>
+                                                <!--=================view some information event  from select choose event============-->
+                                                <h2 style="margin-bottom: 4%;height: 60px;">{{event.name}}</h2>
+                                                <div id="imageevent">
+                                                    <img src={{event.image}} alt="" height="350px" width="300px" style="margin-top: 30px" >
+                                                </div>
+                                                <div id="detailevent" style="color: black; ">
+                                                    <p>From:{{event.startDate}} to:{{event.endDate}}</p>
+                                                    <p>Open:{{event.startHour}}--{{event.endHour}}</p>
+                                                    <p>Price for Adult:{{event.priceAdult}} USD</p>
+                                                    <p>Price for Child: {{event.priceChild}} USD</p>
+                                                </div>
+            
+                                            </div>
+            
+                                            <!--========================column booking==========================-->
+                                            <div class="col-md-6" id="colBooking">
+            
+            
+                                                <h2 style="text-align: center;">Information Booking</h2>
+                                                <hr>
+                                                <!--==================form event=========================-->
+                                                <form name="myForm" class="form-group">
+            
+                                                    <div class="input-group">
+            
+                                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                        <input type="text" id="txtName" name="txtName" pattern="[a-z\sA-Z]{2,}" data-toggle="tooltip" title="Enter your Name" ng-model="name"
+                                                            class="form-control" placeholder="Name" >
+            
+                                                    </div>
+                                                    <!--==================check valid input and alert for user=========================-->
+                                                    <div ng-show="myForm.txtName.$invalid&&myForm.txtName.$dirty" class="alert alert-warning fade in" id="alertinput">The Name is invalid<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+                                                    <!--=================================================================================-->
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                                        <input type="tel" id="numTel" name="numPhone" pattern="[0-9]{5,}" data-toggle="tooltip" title="Enter your Phone" ng-model="phone"
+                                                            class="form-control" placeholder="Phone" >
+                                                    </div>
+                                                    <!--==================check valid input and alert for user=========================-->
+                                                    <div ng-show="myForm.numPhone.$invalid&&myForm.numPhone.$dirty" class="alert alert-warning fade in" id="alertinput">The phone is invalid (5 digits more)<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+                                                    <!--=================================================================================-->
+            
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                                        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" ng-model="email" data-toggle="tooltip"
+                                                            title="Enter your email" class="form-control" placeholder="Email" >
+                                                    </div>
+                                                    <!--==================check valid input and alert for user=========================-->
+                                                    <div ng-show="myForm.email.$invalid&&myForm.email.$dirty" class="alert alert-warning fade in" id="alertinput">The Name is invalid(example:phuoc@gmail.com)<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+                                                    <!--=================================================================================-->
+            
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                        <input type="text" id="txtAddress" name="txtAddress" data-toggle="tooltip" title="Enter your address" ng-model="address"
+                                                            class="form-control" placeholder="Address">
+                                                    </div>
+                                                    <!--==================================choose event=====================================-->
+                                                    <div class="form-group">
+                                                        <span class="input-group-addon">Choose Event&nbsp;&nbsp;&nbsp;<i class="glyphicon glyphicon-hand-down"></i></span>
+                                                        <select class="form-control" id="selectEvent" name="selectEvent" ng-model="event" data-toggle="tooltip" title="Choose An event"
+                                                            ng-options="x.name for x in eventname"  ng-change="limitdate()">
+            
+                                                        </select>
+                                                        <!--==================check valid input and alert for user=========================-->
+                                                        <div ng-show="myForm.selectEvent.$invalid&&myForm.selectEvent.$dirty" class="alert alert-warning fade in" id="alertinput">Please choosse an event<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+                                                        <!--=================================================================================-->
+            
+                                                    </div>
+            
+                                                    <!--=====================choose number person to visit==========================-->
+            
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-user-secret"></i>&nbsp;Adult(s)</span>
+                                                                <input type="number" id="numAdults" name="numAdult" data-toggle="tooltip" title="Enter number adults" ng-model="adult" class="form-control"
+                                                                    min="1" >
+                                                            </div>
+                                                        </div>
+                                                        <!--==================check valid input and alert for user=========================-->
+                                                        <div ng-show="myForm.numAdult.$invalid&&myForm.numAdult.$dirty" class="alert alert-warning fade in" id="alertinput">The Number must be more than 1<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+                                                        <!--=================================================================================-->
+                                                        <div class="col-md-6">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-user"></i>&nbsp;Child(ren)</span>
+                                                                <input type="number" id="numChild" name="numChild" data-toggle="tooltip" title="Enter number children" ng-model="child" class="form-control"
+                                                                    min="1" >
+                                                            </div>
+                                                        </div>
+                                                        <!--==================check valid input and alert for user=========================-->
+                                                        <div ng-show="myForm.numChild.$invalid&&myForm.numChild.$dirty" class="alert alert-warning fade in" id="alertinput">The Number must be more than 1<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+                                                        <!--=================================================================================-->
+            
+                                                    </div>
+            
+                                                    <!--============================choose date to visit======================================-->
+            
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                        <input type="date" id="datevisit" name="datevisit" ng-model="datevisit" data-toggle="tooltip" title="Enter the date to visit"
+                                                            class="form-control" >
+                                                    </div>
+                                                    <!--===========================total price =======================================-->
+            
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                                                        <input type="number" id="numTotal" name="numTotal" ng-model="total" ng-value="adult*event.priceAdult + child*event.priceChild"
+                                                            class="form-control" readonly text-right size="20" placeholder="Total">
+                                                        <span id="usd">USD</span>
+                                                    </div>
+            
+                                                    <div class="alert alert-warning" id="submiterror">
+                                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                        <strong>Hello!</strong> please complete some field before submit! thanks
+                                                    </div>
+            
+            
+                                                    <!--===============information when visitor submit successfully=====================-->
+                                                    <div class="alert alert-success" name="submitinfor2" id="submitinfor2">
+                                                        <h1>Thanks you for your support</h1>
+            
+                                                        <p>
+                                                            <b> Your booking information:</b>
+                                                        </p>
+                                                        <ul>
+                                                            <li>Your name: {{name}}</li>
+                                                            <li>Event: {{event.name}}</li>
+                                                            <li>Open:{{event.startHour}}--{{event.endHour}}</li>
+                                                            <li>Date: {{datevisit.toDateString()}}</li>
+                                                            <li>Total price: {{adult*event.priceAdult + child*event.priceChild}} USD</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <!--===============button  link home page=====================-->
+            
+                                                        <a id="btnAlert" class="btn btn-large btn-block btn-success" href="homepage.html" role="button">OK</a>
+            
+                                                        <!--========================end of information==========================-->
+                                                        <!--====================submit button============================================-->
+                                                    </div>
+                                                    <button type="submit" id="nameSubmit" name="nameSubmit" class="btn btn-lg btn-danger" ng-click="submit()">
+                                                        <span class="glyphicon glyphicon-send"></span>SUBMIT
+                                                    </button>
+                                                </form>
+                                                <!--===========================end of booking form=====================================-->
+            
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                                <!--===========================footer form==================================-->
+                                <div class="modal-footer">
+            
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+
+            <!--End of col-md-6-->
+        </div>
+        <!--End of row-->
+    </div>
+    <!--End of container-->
+    
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myModal', function ($scope) {
+            $scope.name = this.name;
+            $scope.email = this.email;
+            $scope.phone = this.phone;
+            $scope.child = this.adult;
+            $scope.adult = this.child;
+            $scope.datevisit = this.datevisit;
+            $scope.eventname = [
+                // detail event data
+                { name: "Ocean Adventure Day Camp 3", image: "img/event/Treats_and_Beats.jpg", startDate: "2018-07-08", endDate: "2018-07-30", priceAdult: 26, priceChild: 10,startHour:"3:00PM",endHour:"6:00PM"},
+
+{ name: 'Deep Beneath the Sea: Exploring the Twilight Zone ', image: "img/event/DeepBeneath.jpg", startDate: "2018-07-10", endDate: "2018-07-27", priceAdult: 36, priceChild: 12,startHour:"7:00PM",endHour:"8:30PM" },
+
+{ name: 'Teen Overnight', image: "img/event/teenovernight.jpeg", startDate: "2018-07-11", endDate: "2018-07-30", priceAdult: 27, priceChild: 11,startHour:"5:00PM",endHour:"7:30PM" },
+
+{ name: 'Junior Biologist: Sharks', image: "img/event/junior.jpg", startDate: "2018-07-14", endDate: "2018-07-30", priceAdult: 38, priceChild: 14,startHour:"9:30AM",endHour:"11:30AM" },
+
+{ name: "Mother 's Day at the Aquarium", image: "img/event/Mothers-Day.jpg", startDate: "2018-07-13", endDate: "2018-07-30", priceAdult: 16, priceChild: 9,startHour:"9:00AM",endHour:"9:30PM" },
+
+{ name: "Father 's Day at the Aquarium", image: "img/event/Fathers-Day-2017.jpg", startDate: "2018-07-17", endDate: "2018-07-30", priceAdult: 17, priceChild: 8,startHour:"9:00AM",endHour:"9:00PM" },
+
+{ name: "Night Dive", image: "img/event/nightdive.jpg", startDate: "2019-07-18", endDate: "2018-07-20", priceAdult: 28, priceChild: 12,startHour:"7:30PM",endHour:"11:00PM" },
+
+{ name: "Twenty Years of Achievements in Husbandry and Conservation", image: "img/event/achievement.jpg", startDate: "2018-07-30", endDate: "2018-07-18", priceAdult: 20, priceChild: 12,startHour:"7:00PM",endHour:"8:30PM" },
+
+{ name: "Job Shadow Class: Marine Biologist", image: "img/event/jobshadow.jpg", startDate: "2018-07-15", endDate: "2018-07-30", priceAdult: 28, priceChild: 12,startHour:"9:00AM",endHour:"12:00PM" },
+
+{ name: "Discount Late Night", image: "img/event/Discountlate.jpg", startDate: "2018-07-15", endDate: "2018-07-30", priceAdult: 23, priceChild: 12 ,startHour:"5:00AM",endHour:"8:00PM"}
+            ];
+            $scope.limitdate = function () {
+                var d = document.getElementById('datevisit');
+                d.min = this.event.startDate;
+                d.max = this.event.endDate;
+
+            }
+
+            //display information when click submit
+            $scope.submit = function () {
+                if ($scope.name != null && $scope.phone != null && $scope.email != null && $scope.adult != null && $scope.child != null && this.datevisit != null && this.event != null) {
+                    var x = document.getElementById('submitinfor2');
+                    x.style.display = "block";//if submit successfully
+                }
+                else {
+                    var y = document.getElementById('submiterror');
+                    y.style.display = "block";//if submit error.
+                }
+            };
+        })
+    </script>
+
+
+    <div id="social-section" style="background-image: url(img/header-bg.jpg);height: 100px">
+        <div class="container">
+            <div class="social">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="fnav">
+                    <p style="text-align: center">Copyright &copy;2018 Design By Team.</p>
+                </div>
+        </div>
+    </div>
+    
+    <!--Scroll to top-->
+    <a href="#" id="myBtn" class="fa fa-arrow-circle-up" style="display: inline;"></a>
+
+    <!--End of Scroll to top-->
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/jquery.counterup.js"></script>
+    <script type="text/javascript" src="js/waypoints.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/contact_me.js"></script>
+
+    <!-- Javascripts
+      ================================================== -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

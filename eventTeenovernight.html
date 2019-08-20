@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Aquarium Nesus</title>
+<!-- Favicons -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet-->
+<link rel="stylesheet" type="text/css"  href="css/event.css">
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script src="js/angular.min.js"></script>
+</head>
+<body>
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top" style="background-color: rgba(0,0,0,.2);">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="homepage.html"><i class="fa fa-rebel"></i> <strong>AQUARIUM</strong></a> </div>
+               
+    
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a><i class="fa fa-lg fa-home"></i></a></li>
+                    <li><a href="homepage.html" class="page-scroll">Home</a></li>
+    
+                  
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Animals<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        
+                    
+                          <li><a href="fish.html">Fish</a></li>
+                          <li><a href="mammals.html">Mammals</a></li>
+                          <li><a href="cephalopod.html">Cephalopods</a></li>
+                          <li><a href="inverterbrate.html">Invertebrates</a></li>
+                          <li><a href="echinoderms.html">Echinoderms</a></li>
+                          <li><a href="shark.html">Sharks</a></li>
+                          <li><a href="crabsandmollusk.html">Crabs & mollusks</a></li>
+                          <li><a href="whales.html">Whales</a></li>
+                      </ul>
+                  </li>
+                    <li><a href="event.html" class="page-scroll">Event</a></li>
+                 
+                    <li><a href="contact.html" class="page-scroll">Contact</a></li>
+                    
+                    <li><a href="booking.html" class="button" style="border-radius: 5px;padding: 8px;background: red;color: white;;margin-top: 8px">Buy Tickets Now!</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    </nav>
+    <!--===========================/START CONTENT===========================-->
+    <div class="panel-body">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="slider_overlay">
+                    <img src="img/eventfam.jpg" alt="..." style="width: 100%;height: 450px">
+                    <div class="carousel-caption" style="left: 2%">
+                      
+                        <div class="slider_text">
+                                <img src="img/logo.jpg" alt="">
+                            <h3>-Summer Event</h3>
+                            <h2>-Knowledge</h2>
+                           <h4> -Aquarium Nesus</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div  class="text-center" style="  background-image: -webkit-gradient( linear,right top,right bottom,color-stop(0.27,wheat),color-stop(0.87,rgb(230,228,218)) );">
+            <div id="content" class="container" ng-app="myApp">
+                    <div class="row" style="text-align: center">
+            
+                            <div class="grid_14 prefix_2" id="pagetitleMain">
+                                <p class="taglineBanner clearfix">
+                                Aquarium Event
+                                </p>
+                                <h2>
+                                <i class="fa fa-calendar"></i>Teen Overnight</h2>
+                                </div>
+                        </div>
+                
+                        <div class="row">
+                         <p><h3>Highlights Include:</h3>
+                            <ul>
+                            <li>Pilot your very own Remote Operated Vehicle (ROV) through an obstacle course</li>
+                            <li>Explore the Aquarium galleries while searching for hidden “bioluminescent” treasures</li>
+                            <li>Witness real bioluminescence in the Aquarium classroom</li>
+                            <li>Sleep in front of one of our most popular exhibits, the Tropical Reef or the Sea Otter Habitat</li>
+                            </ul>
+                            <h3>What to bring:</h3>
+                            <ul>
+                            <li>Closed toed shoes are required</li>
+                            <li>Sleeping bag, pillow, etc. We will be sleeping on the floor in a gallery. You may wish to bring a cot or air mattress for your comfort, but make sure that you bring only what YOU can carry!</li>
+                            <li>Conservative pajamas </li>
+                            <li>Toothbrush and other toiletries (Sorry, no showers are available)</li>
+                            <li>An outfit for the next day</li>
+                            <li>Do NOT bring food. We will provide a pizza dinner and cereal breakfast. We can accommodate special dietary needs. Please let us know in advance.</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4" id="imageHallowen">
+                                <img src="img/event/teenovernight.jpeg" alt="" width="100%" style="height: 300px;" id="outline1" class="img-responsive">
+                                <table ng-controller="ctrTable" id="outline1">
+                                    <tr>
+                                        <th colspan="2">Infomation Other</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Start date</td>
+                                        <td>{{eventname[2].startDate}}</td>
+                
+                                    </tr>
+                                    <tr>
+                                        <td>End date</td>
+                                        <td>{{eventname[2].endDate}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price Adult</td>
+                                        <td>{{eventname[2].priceAdult}} USD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price Child</td>
+                                        <td>{{eventname[2].priceChild}} USD</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-8">
+                              
+                                <div class="row">
+                                    <table>
+                                        <tr>
+                                            <th colspan="3">Event Details</th>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>when
+                                            <td colspan="2"><span style="display: none">
+                                                Mon, July 09, 2018 00:00:00
+                                                </span >
+                                                <a href="eventcalendar.html">
+                                                <strong>
+                                                    Mon, July 11, 2018
+                                                </strong> | 5:00&nbsp;PM–7:30&nbsp;PM</a>
+                                               
+                                               
+                                              
+                
+                                        </tr>
+                                        <tr>
+                                            <td>Cost</td>
+                                            <td colspan="2"><p>
+                                                $90 ($80 for Aquarium Members) *Pre-Registration required. Children Only.</p></td>
+                
+                                        </tr>
+                                        <tr>
+                                            <td>Age</td>
+                                            <td colspan="2"><p>
+                                              13-15</p></td>
+                
+                                        </tr>
+                                        <tr>
+                                            <td>Ticket</td>
+                                            <td colspan="2"><strong>You can purchase tickets online for this lecture.</strong>
+                                                <br>
+                                                You will need to select the option from the menu, correct time, and date on the following pages. Seniors age 62 and up, teachers, and students attending for free can also reserve seats online.
+                                                </a>.
+                                                <br></td>
+                
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td>Info</td>
+                                           <td colspan="2"><strong>(562) 590-3100</strong><br>Pre-registration and pre-payment required on all experiences unless noted. Cancellations made 1 week before the program will receive a full refund. Cancellations made less than 1 week before a program will still be charged the full program price.</td>
+                
+                                        </tr>
+                                   
+                
+                                    </table>
+                
+                                </div>
+                
+                            </div>
+                
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="img/event/overnight1.jpg" alt="" id="outline1" class="img-responsive">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="img/event/overnight2.jpg" alt="" id="outline1" class="img-responsive">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="img/event/overnight3.jpg" alt=""   id="outline1" class="img-responsive">
+                            </div>
+                        </div>
+                
+                
+            </div>
+        </div>
+    <!--===========================/END CONTENT===========================-->
+    <div id="social-section" style="background-image: url(img/header-bg.jpg);height: 100px">
+        <div class="container">
+            <div class="social">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="fnav" >
+                    <p>Copyright &copy;2018 Design By Team.</p>
+                </div>
+        </div>
+    </div>
+      
+    <!--Scroll to top-->
+    <a href="#" id="myBtn" class="fa fa-arrow-circle-up" style="display: inline;"></a>
+      
+    <!--End of Scroll to top-->
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+      
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+      
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/jquery.counterup.js"></script>
+    <script type="text/javascript" src="js/waypoints.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/contact_me.js"></script>
+
+    <!-- Javascripts-->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('ctrTable', function ($scope) {
+            $scope.eventname = [
+                // detail event data
+                { name: "Ocean Adventure Day Camp 3", image: "img/event/Treats_and_Beats.jpg", startDate: "2018-07-08", endDate: "2018-07-30", priceAdult: 22, priceChild: 10 },
+
+                { name: 'Deep Beneath the Sea: Exploring the Twilight Zone ', image: "img/event/DeepBeneath.jpg", startDate: "2018-07-10", endDate: "2018-07-27", priceAdult: 36, priceChild: 12 },
+
+                { name: 'Teen Overnight', image: "img/event/teenovernight.jpeg", startDate: "2018-07-11", endDate: "2018-07-30", priceAdult: 27, priceChild: 11 },
+
+                { name: 'Junior Biologist: Sharks', image: "img/event/junior.jpg", startDate: "2018-07-14", endDate: "2018-07-30", priceAdult: 38, priceChild: 14 },
+
+                { name: "Mother 's Day at the Aquarium", image: "img/event/Mothers-Day.jpg", startDate: "2018-07-13", endDate: "2018-07-30", priceAdult: 16, priceChild: 9 },
+
+                { name: "Father 's Day at the Aquarium", image: "img/event/Fathers-Day-2017.jpg", startDate: "2018-07-17", endDate: "2018-07-30", priceAdult: 17, priceChild: 8 },
+
+                { name: "Night Dive", image: "img/event/nightdive.jpg", startDate: "2019-07-18", endDate: "2018-07-20", priceAdult: 28, priceChild: 12 },
+
+                { name: "Twenty Years of Achievements in Husbandry and Conservation", image: "img/event/achievement.jpg", startDate: "2018-07-30", endDate: "2018-07-18", priceAdult: 20, priceChild: 12 },
+
+                { name: "Job Shadow Class: Marine Biologist", image: "img/event/jobshadow.jpg", startDate: "2018-07-15", endDate: "2018-07-30", priceAdult: 28, priceChild: 12 },
+
+                { name: "Discount Late Night", image: "img/event/Discountlate.jpg", startDate: "2018-07-15", endDate: "2018-07-30", priceAdult: 23, priceChild: 12 }
+            ];
+        });
+                  
+    </script>
+            
+</body>
+</html>

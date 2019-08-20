@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+</head>
+<body>
+        <form action="somefile.php">
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    pattern="[a-z\sA-Z]"
+                    id="username">
+            </form>
+<script>
+    var input = document.getElementById('username');
+    input.oninvalid = function(event) {
+    event.target.setCustomValidity('Chi nhap chu khong dc nhap so!!!');
+   
+}
+</script>
+</body>
+</html>
